@@ -11,6 +11,9 @@ body {
   background: var(--primary-color);
   color: var(--text-color);
   font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* custom scroll bar */
