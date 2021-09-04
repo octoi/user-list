@@ -1,23 +1,23 @@
 {
   "users": [
     {
-      "name": "Rick Astley",
+      "name": "Rick Astley 1",
       "image": "/images/rick.jpg"
     },
     {
-      "name": "Rick Astley",
+      "name": "Rick Astley 2",
       "image": "/images/rick.jpg"
     },
     {
-      "name": "Rick Astley",
+      "name": "Rick Astley 3",
       "image": "/images/rick.jpg"
     },
     {
-      "name": "Rick Astley",
+      "name": "Rick Astley 4",
       "image": "/images/rick.jpg"
     },
     {
-      "name": "Rick Astley",
+      "name": "Rick Astley 5",
       "image": "/images/rick.jpg"
     }
   ]

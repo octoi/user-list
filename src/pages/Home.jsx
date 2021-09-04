@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { users } from '../utils/list.json';
 import { Container } from '../styled-components/home';
 
-// components
 import Search from '../components/home/Search';
 import UserList from '../components/home/UserList';
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState('');
+  const [customUsers, setCustomUsers] = useState(users);
+
+  useEffect(() => {
+    if (searchValue === '') {
+      setCustomUsers(users);
+      return;
+    }
+
+    let searchedUsers = users.filter(user => user.name.toLowerCase().includes(searchValue.toLowerCase()))
+    setCustomUsers(searchedUsers);
+  }, [searchValue])
 
   return (
     <Container>
       <Search onChange={sv => setSearchValue(sv)} />
-      <UserList users={users} />
+      <UserList users={customUsers} />
     </Container>
   )
 }
