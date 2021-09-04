@@ -12,3 +12,31 @@ body {
   color: var(--text-color);
   font-family: "Nunito", sans-serif;
 }
+
+/* custom scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+  border-radius: 5px;
+}
+
+/* custom selection  */
+
+::selection {
+  background: var(--accent-color);
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+  background: none;
+}
