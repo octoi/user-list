@@ -2,15 +2,16 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   width: 800px;
-
+  height: 100vh;
+  
   @media (max-width: 900px) {
     width: 85vw;
     margin-top: 50px;
+    margin-bottom: 50px;
+    height: 100%;
   }
 `
 
