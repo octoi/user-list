@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { users } from '../utils/list.json';
 import { Container } from '../styled-components/home';
 
-import Search from '../components/home/Search';
-import UserList from '../components/home/UserList';
+import Search from '../components/Search';
+import UserList from '../components/UserList';
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState('');
