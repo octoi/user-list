@@ -15,8 +15,8 @@ export const Container = styled.div`
 `
 
 export const UserContainer = styled.div`
+  position: relative;
   background: var(--secondary-color);
-  /* padding: 20px; */
   border-radius: 13px;
   width: 100%;
 
@@ -29,5 +29,52 @@ export const UserContainer = styled.div`
     -webkit-filter: blur(3px);
   }
 
-  .padding { padding: 20px; }
+  .user {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent-color);
+    }
+
+    h2 {
+      margin: 0px;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      font-size: 35px;
+    }
+  }
+
+  .content { 
+    margin-top: 40px;
+    padding: 30px 30px 10px 30px; 
+
+    p {
+      font-size: 23px;
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 625px) {
+    .user {
+      flex-direction: column;
+      align-items: flex-start;
+
+      h2 {
+        margin-top: 10px;
+        margin-left: 8px;
+      }
+    }
+
+    .content {
+      margin-top: 90px;
+    }
+  }
 `
