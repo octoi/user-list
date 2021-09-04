@@ -8,6 +8,11 @@ export const Container = styled.div`
   margin-top: 100px;
   width: 600px;
 
+  @media (max-width: 700px) {
+    width: 85vw;
+    margin-top: 50px;
+  }
+
   input {
     font-size: 23px;
     border-radius: 15px;
@@ -28,13 +33,20 @@ export const Container = styled.div`
     align-items: center;
 
     div {
-      background: var(--secondary-color);
       width: 100%;
       padding: 10px 20px;
       border-radius: 13px;
-      border: 2px solid var(--secondary-color);
       display: flex;
       align-items: center;
+      transition: 0.5s;
+      cursor: pointer;
+      margin-bottom: 12px;
+      background: var(--secondary-color);
+      border: 2px solid var(--secondary-color);
+      
+      &:hover {
+        border: 2px solid var(--accent-color);
+      }
 
       img {
         width: 60px;
