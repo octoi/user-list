@@ -5,12 +5,16 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
   width: 600px;
 
   @media (max-width: 700px) {
     width: 85vw;
     margin-top: 50px;
+  }
+
+  h1 {
+    font-weight: 600;
   }
 
   input {

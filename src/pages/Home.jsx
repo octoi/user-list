@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { users } from '../utils/list.json';
+import { users, title } from '../utils/list.json';
 import { containerVariants } from '../utils/constants';
 import { Container } from '../styled-components/home';
 
@@ -29,6 +29,7 @@ export default function Home() {
       exit="exit"
     >
       <Container>
+        <h1>{title}</h1>
         <Search onChange={sv => setSearchValue(sv)} />
         <UserList users={customUsers} />
       </Container>
