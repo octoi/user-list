@@ -7,10 +7,7 @@ export default function UserList({ users }) {
   return (
     <div className='user-list'>
       {users.map((user, idx) => {
-        return <div
-          onClick={() => history.push(`/user/${idx}`)}
-          key={idx}
-        >
+        return <div key={idx} onClick={() => history.push(`/user/${idx}`)}>
           <img src={user?.image} alt={user?.name} />
           <p>{user?.name}</p>
         </div>

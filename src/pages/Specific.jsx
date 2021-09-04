@@ -2,30 +2,9 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useHistory } from 'react-router-dom';
 import { users } from '../utils/list.json'
+import { containerVariants } from '../utils/constants';
 import { useParams } from 'react-router-dom';
 import { Container, UserContainer } from '../styled-components/specific';
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-    x: '100vw'
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      mass: 0.3,
-      damping: 8,
-      when: "beforeChildren",
-      staggerChildren: 0.4,
-    }
-  },
-  exit: {
-    x: '-100vw',
-    transition: { ease: 'easeInOut' }
-  }
-}
 
 export default function Specific() {
   const history = useHistory();
@@ -40,7 +19,6 @@ export default function Specific() {
 
   return (
     <motion.div
-      className="container order"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

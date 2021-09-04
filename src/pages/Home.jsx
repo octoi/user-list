@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { users } from '../utils/list.json';
+import { containerVariants } from '../utils/constants';
 import { Container } from '../styled-components/home';
 
 import Search from '../components/Search';
@@ -20,9 +22,16 @@ export default function Home() {
   }, [searchValue])
 
   return (
-    <Container>
-      <Search onChange={sv => setSearchValue(sv)} />
-      <UserList users={customUsers} />
-    </Container>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      <Container>
+        <Search onChange={sv => setSearchValue(sv)} />
+        <UserList users={customUsers} />
+      </Container>
+    </motion.div>
   )
 }
