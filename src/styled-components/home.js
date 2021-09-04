@@ -11,10 +11,44 @@ export const Container = styled.div`
   input {
     font-size: 23px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 25px 20px;
     width: 100%;
     background: var(--secondary-color);
     color: var(--text-color);
     border: 2px solid var(--accent-color);
+  }
+
+  .user-list {
+    margin-top: 30px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      background: var(--secondary-color);
+      width: 100%;
+      padding: 10px 20px;
+      border-radius: 13px;
+      border: 2px solid var(--secondary-color);
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid var(--accent-color);
+      }
+
+      p {
+        font-size: 23px;
+        font-weight: 600;
+        margin-left: 20px;
+      }
+    }
   }
 `;

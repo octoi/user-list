@@ -2,10 +2,11 @@ import React from 'react';
 
 export default function UserList({ users }) {
   return (
-    <div>
+    <div className='user-list'>
       {users.map(user => {
         return <div key={user}>
-          <h2>{user?.name}</h2>
+          <img src={user?.image} alt={user?.name} />
+          <p>{user?.name}</p>
         </div>
       })}
     </div>
